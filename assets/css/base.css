@@ -59,9 +59,7 @@ html {
 
 .modal__body {
     margin: auto;
-    background-color: var(--white-color);
     position: relative;
-    border-radius: 5px;
     z-index: 1;
 }
 
@@ -72,16 +70,38 @@ html {
 /*Button style*/
 .btn {
     min-width: 142px;
-    height: 36px;
+    height: 34px;
     text-decoration: none;
     border: none;
     border-radius: 2px;
     font-size: 1.5rem;
-    line-height: 0;
-    padding: 0;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.btn--normal:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn.btn--size-s {
+    height: 32px;
+    font-size: 12px;
+    align-items: center;
+    padding: 0 8px;
 }
 
 .btn.btn-primary {
     background-color: var(--primary-color);
     color: var(--white-color);
+}
+
+.btn.btn-disabled {
+    color: #ccc;
+    cursor: default;
+    background-color: #999;
 }
