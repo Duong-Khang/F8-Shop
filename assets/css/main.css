@@ -38,7 +38,7 @@
 }
 
 .header__navbar-user-name {
-    margin-left: 8px;
+    margin-left: 4px;
     font-size: 1.4rem;
     font-weight: 400;
 }
@@ -85,6 +85,10 @@
     
 }
 
+.header__navbar-user-item--separate {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 .header__navbar-user-item a {
     text-decoration: none;
     color: var(--text-color);
@@ -110,7 +114,7 @@
 .header__navbar-item,
 .header__navbar-item-link {
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--white-color);
     text-decoration: none;
     font-weight: 300;
@@ -141,6 +145,10 @@
 .header__navbar-icon-link {
     color: var(--white-color);
     text-decoration: none;
+}
+
+.header__navbar-icon-link:nth-child(2) {
+    margin-left: 3px;
 }
 
 .header__navbar-icon {
@@ -212,13 +220,15 @@
 /*Header notification*/
 .header__notify {
     position: absolute;
+    z-index: 1;
     top: 118%;
     width: 404px;
     background-color: var(--white-color);
     right: 0;
-    border: 1px solid #d3d3d3;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0,1);
     cursor: default;
-    transform-origin: calc(100%-20px) top;
+    transform-origin: calc(100%-32px) top;
     -moz-animation: headerNotifyGrowth ease-in 0.2s;
     -o-animation: headerNotifyGrowth ease-in 0.2s;
     -webkit-animation: headerNotifyGrowth ease-in 0.2s;
@@ -482,6 +492,11 @@
     width: 150px;
 }
 
+.header__logo-link {
+    text-decoration: none;
+    color: transparent;
+}
+
 .header__search {
     flex: 1;
     background-color: var(--white-color);
@@ -557,7 +572,7 @@
 .header__search-option {
     position: absolute;
     right: 0;
-    top: 100%;
+    top: calc(100% + 2px);
     width: 130px;
     /* margin-top: 16px; */
     list-style: none;
